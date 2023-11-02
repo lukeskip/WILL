@@ -14,9 +14,13 @@ function buscarAmigo(amigos, nombre) {
   //  buscarAmigo(amigos, 'toni') debe devolver { nombre: 'toni', edad: 33 };
 
   // Tu código aca:
-  
+  const found = amigos.find((element) => {
+    return element.nombre.toLowerCase() === nombre.toLowerCase();
+  });
+
+  return found;
 }
 
 // No modifiques nada debajo de esta linea //
 
-module.exports = buscarAmigo
+module.exports = buscarAmigo;
